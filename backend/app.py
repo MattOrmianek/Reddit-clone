@@ -1,7 +1,8 @@
 import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from models import db, User, Post, Comment, Subreddit
+# Use an absolute import so running the app from the project root works
+from backend.models import db, User, Post, Comment, Subreddit
 from dotenv import load_dotenv
 
 
