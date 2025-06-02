@@ -22,3 +22,14 @@ npm start
 ```
 
 The application will be available at `http://localhost:8080` by default.
+
+### Configuring the API URL
+
+The frontend reads the backend's base URL from the environment variable
+`REACT_APP_API_URL`. Copy `.env.example` to `.env` and edit it if your backend
+is not running on `http://localhost:5000`:
+
+```bash
+cp .env.example .env
+# then edit .env to point to your backend
+```
