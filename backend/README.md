@@ -17,11 +17,13 @@ pip install -r requirements.txt
 3. Initialize the database tables:
 
 ```bash
-python -c "from app import db, app; app.app_context().push(); db.create_all()"
+# Run this from the project root so the `backend` package can be imported
+python -c "from backend.app import db, app; app.app_context().push(); db.create_all()"
 ```
 
 4. Run the development server:
 
 ```bash
-flask --app app run
+# Run this from the project root so Flask can import the backend package
+flask --app backend.app run
 ```
